@@ -31,3 +31,41 @@ const printForecast = function (arr) {
 }
 
 printForecast(data1);
+
+// primitive types
+let firstname = 'pawan';
+let lastname = 'kalyan';
+
+lastname = 'choudary';
+console.log('firstname', firstname);
+console.log('lastname', lastname);
+
+// reference types
+
+const pawan = {
+    firstname: 'pawan',
+    lastname: 'kalyan',
+    age: 27
+}
+
+const marriedPawan = pawan;
+marriedPawan.lastname = 'choudary';
+console.log('pawan object',pawan);
+console.log('marriedPawan onject',marriedPawan);
+
+// copying objects using assign
+// it creates only a shallow copy no so effective way for copying objects
+
+
+const pawan2 = {
+    firstname: 'pawan',
+    lastname: 'kalyan',
+    age: 27
+}
+
+const pawanCopy = Object.assign({},pawan2);
+pawanCopy.age = 30;
+console.log('pawan object',pawan2);
+console.log('pawanCopy onject',pawanCopy);
+
+
